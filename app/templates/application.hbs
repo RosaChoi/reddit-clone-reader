@@ -1,7 +1,9 @@
 <div class="ui purple inverted menu">
+  {{#link-to "application"}}
   <a class="item">
     <img id="redditLogo" src="http://i.imgur.com/Nbs9tla.png"><span id="appName">REDDIT CLONE</span>
   </a>
+  {{/link-to}}
   <a class="item item-post">{{link-to "Comics" "posts" "comics"}}</a>
   <a class="item item-post">{{link-to "Art" "posts" "art"}}</a>
 </div>
@@ -9,14 +11,14 @@
 <div class="container">
   <div class="ui warning form segment">
     <div class="two field">
-      <div class="field">
-        {{input value=search placeholder="Search Posts" type="text"}}
+      <div class="ui icon input field">
+        {{input value=search stype="text" placeholder="Search Posts..."}}
+        <i class="search icon"></i>
       </div>
       <div class="inline field">
-        <div class="ui radio checkbox">
-          <input type="radio" name="fruit" checked="">
-          <label>Subreddit</label>
-        </div>
+          {{input type="checkbox" classNames="ui checkbox" checked=searchSubreddits}}
+          <label>Search Subreddit</label>
+
       </div>
     </div>
     <div class="ui purple button submit" {{action "search"}}><i class="icon search"></i>Search</div>

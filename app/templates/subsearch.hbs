@@ -1,0 +1,12 @@
+<h3>Subreddit Search</h3>
+
+{{#each subreddit in model}}
+{{log subreddit}}
+<img {{bind-attr src=subreddit.data.header_img}} />
+
+  <li>
+    {{#link-to "posts" subreddit.data.display_name}}
+      <strong>{{subreddit.data.display_name}}</strong>
+    {{/link-to}}
+  </li>
+{{/each}}

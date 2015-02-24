@@ -1,6 +1,16 @@
-<h1>Posts</h1>
+<div class="row sort">
+  <h1>Posts
+    <span class="ui icon button" {{action "changeSort"}}>
+      <i class="sort ascending icon icon"></i>
+    </span>
+    <span class="ui icon button" {{action "changeSort"}}>
+      <i class="sort descending icon icon"></i>
+    </span>
+  </h1>
+</div>
 <div class="ui divided list">
-  {{#each post in model}}
+  {{#each post in controller}}
+  {{log post}}
   <div class="item">
     <div class="right floated compact ui button">Add</div>
     <img class="ui avatar image" {{bind-attr src=post.data.thumbnail}} />

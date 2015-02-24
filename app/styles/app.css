@@ -27,3 +27,7 @@
 h1 {
   margin: 1.5em;
 }
+
+h1 span {
+  margin-left: 2em;
+}

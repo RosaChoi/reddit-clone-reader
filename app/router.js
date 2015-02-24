@@ -13,6 +13,9 @@ Router.map(function() {
   this.route("search", {
     path: "/search/:query"
   });
+  this.route('subsearch', {
+    path: "/search/subreddits/:query"
+  });
 });
 
 export default Router;
