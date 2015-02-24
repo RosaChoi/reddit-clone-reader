@@ -1,0 +1,29 @@
+.ui.menu {
+  border-radius: 0;
+}
+
+#redditLogo {
+  width: 50px;
+}
+
+#appName {
+  position: relative;
+  top: -10px;
+}
+
+.ui.menu a.item-post {
+  padding: 30px;
+  top: 7px;
+}
+
+.container {
+  margin: 2em;
+}
+
+.ui.list > .item .header {
+  color: #564f8a;
+}
+
+h1 {
+  margin: 1.5em;
+}

@@ -1,3 +1,25 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="ui purple inverted menu">
+  <a class="item">
+    <img id="redditLogo" src="http://i.imgur.com/Nbs9tla.png"><span id="appName">REDDIT CLONE</span>
+  </a>
+  <a class="item item-post">{{link-to "Comics" "posts" "comics"}}</a>
+  <a class="item item-post">{{link-to "Art" "posts" "art"}}</a>
+</div>
 
-{{outlet}}
+<div class="container">
+  <div class="ui warning form segment">
+    <div class="two field">
+      <div class="field">
+        {{input value=search placeholder="Search Posts" type="text"}}
+      </div>
+      <div class="inline field">
+        <div class="ui radio checkbox">
+          <input type="radio" name="fruit" checked="">
+          <label>Subreddit</label>
+        </div>
+      </div>
+    </div>
+    <div class="ui purple button submit" {{action "search"}}><i class="icon search"></i>Search</div>
+  </div>
+  {{outlet}}
+</div>

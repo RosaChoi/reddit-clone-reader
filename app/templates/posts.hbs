@@ -1,0 +1,16 @@
+<h1>Posts</h1>
+<div class="ui divided list">
+  {{#each post in model}}
+  <div class="item">
+    <div class="right floated compact ui button">Add</div>
+    <img class="ui avatar image" {{bind-attr src=post.data.thumbnail}} />
+    <div class="content">
+      <div class="header">{{post.data.score}}</div>
+      <div class="description">{{post.data.title}}</div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+
+{{outlet}}
